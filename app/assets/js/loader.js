@@ -31,7 +31,7 @@
 
          ship = new THREE.Mesh(geometry, material);
          //ship.position.set, -5, 0);
-         ship.scale.multiplyScalar(20);
+         ship.scale.multiplyScalar(10);
 
          ship.castShadow = true;
          ship.receiveShadow = false;

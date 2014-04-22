@@ -28,7 +28,7 @@ function init() {
     
     //CAMERA    
     camera = new THREE.PerspectiveCamera(20, window.innerWidth / window.innerHeight, 1, 3000);
-    camera.position.y = 10;
+    camera.position.y = 0;
     camera.position.x = 30;
     camera.position.z = 200;
 
@@ -307,6 +307,10 @@ function render() {
     var time = timer * 0.00015;
     //camera.position.x = Math.cos(time) * 100;    
     //camera.lookAt(group.position);
+    ship.rotation.y = time * 3;
+    star_system.rotation.y = (time * 0.1);
+    
+    
 
     if (!postprocessing.enabled) {
         renderer.clear();
