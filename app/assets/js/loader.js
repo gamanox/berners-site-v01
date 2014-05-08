@@ -20,7 +20,7 @@
  function loadShip() {
 
      var loader = new THREE.JSONLoader();
-     loader.load('/js/icosphere.js', function (geometry, materials) {
+     loader.load('/obj/icosphere.js', function (geometry, materials) {
 
          var material = new THREE.MeshLambertMaterial({
              ambient: 0x999999,
@@ -88,7 +88,10 @@
 
          loaded = true;
          var loadingDom = document.getElementById('loading');
+        
+
          loading.style.display = 'none';
+         
          group.scale.multiplyScalar(1.4);
          scene.add(group);
 
@@ -130,11 +133,13 @@
      var uniforms = {
          topColor: {
              type: "c",
-             value: new THREE.Color(0x373670)
+             // value: new THREE.Color(0x373670)
+             value: new THREE.Color(0x333462)
          },
          bottomColor: {
              type: "c",
-             value: new THREE.Color(0x43668C)
+             // value: new THREE.Color(0x43668C)
+             value: new THREE.Color(0x4A9886)
          },
          offset: {
              type: "f",
@@ -182,3 +187,5 @@
 
 
  }
+
+

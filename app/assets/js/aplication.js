@@ -20,7 +20,20 @@ var isAnimating = false;
 var meshes = {};
 
 
-
+ $(document).ready(function(){
+    var col = 255;
+    
+    $('#container').bind('mousewheel', function(e){
+        if(e.wheelDelta/120 > 0) {
+            if(col < 245) col+=10;
+           console.log('up');
+        }
+        else{
+            if(col > 10) col-=10;
+           console.log('down');
+        }
+    });
+});
 
 function init() {
 
@@ -41,9 +54,10 @@ function init() {
     //RENDERER
     renderer = new THREE.WebGLRenderer({
         antialias: false,
-        alpha: false
+        alpha: true
     });
     renderer.setSize($(window).width(), $(window).height());
+    renderer.setClearColor( 0x000000, 0 );
     
     if (BrowserDetect.browser != 'Explorer' && BrowserDetect.browser != 'Other') {
 

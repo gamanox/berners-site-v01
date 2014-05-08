@@ -6,7 +6,7 @@ html(ng-app="jacs")
 		title jacs
 		link(rel='favicon.ico', href='favicon.ico')
 		link(rel='stylesheet', href='/css/app.css')
-		link(rel='stylesheet', href='/css/style.css')
+		link(rel='stylesheet', href='/css/canvas.css')
 		script(type="text/javascript").
 			window.brunch = window.brunch || {}
 			window.brunch['auto-reload'] = {enabled: true}
@@ -42,29 +42,66 @@ html(ng-app="jacs")
 
 	body
 		
-		#loading
+		#loading CARGANDO
 		#container
 		#guiControls
 		.interfaz
 			.logo
 			.line
+			.menu
+				a.about(href="") ABOUT
+				a.servicios(href="") SERVICIOS
+				a.contacto(href="") CONTACTO
+			
+			.social
+				a.blog(target="_blank", href="") BLOG
+				a.fb(target="_blank", href="")
+				a.tw(target="_blank", href="")
+				a.ins(target="_blank", href="")
+				a.mail(target="_blank", href="")
+		
+		.section#about
+			.bg
+			.stars
+			.left
+				.planet
+			.right
+				p.title
+					| WE ARE<br>BERNERS<br>STUDIO
+				p.descrip
+					| A PALE YELLOW D<span>.</span>T
+		.section#about2
+			.bg
+		.section#about3
+			.bg
+		.section#about4
+			.bg
+		.section#about5
+			.bg
+			img.compita1(src="/img/compita1.png", width="100%", height="auto")
+			img.compita2(src="/img/compita2.png", width="100%", height="auto")
+		.section#about6
+			.bg
+			
+				
+
 		script(src="js/stats.min.js")
-		script(src="js/dat.gui.min.js")		
-		script(src="js/CopyShader.js")   		
+		script(src="js/dat.gui.min.js")
+		script(src="js/CopyShader.js")		
 		script(src="js/EffectComposer.js")
 		script(src="js/RenderPass.js")
 		script(src="js/ShaderPass.js")
 		script(src="js/MaskPass.js")				
-		script(src="js/FocusShader.js")		
-		script(src="js/FilmShader.js")		
-		script(src="js/FilmPass.js")		
-		script(src="js/ConvolutionShader.js")		
-		script(src="js/HorizontalTiltShiftShader.js")		
-		script(src="js/VerticalTiltShiftShader.js")		
-		script(src="js/VignetteShader.js")				
-		script(src="js/BloomPass.js")		
-		script(src="js/FXAAShader.js")		
-		script(src="js/tween.min.js")		
+		script(src="js/FocusShader.js")
+		script(src="js/FilmShader.js")
+		script(src="js/FilmPass.js")
+		script(src="js/ConvolutionShader.js")
+		script(src="js/HorizontalTiltShiftShader.js")
+		script(src="js/VerticalTiltShiftShader.js")
+		script(src="js/VignetteShader.js")
+		script(src="js/BloomPass.js")
+		script(src="js/FXAAShader.js")
+		script(src="js/tween.min.js")
 		script(src="js/loader.js")
 		script(src="js/util.js")
 		script(src="js/app.js")

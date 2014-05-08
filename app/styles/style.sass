@@ -1,19 +1,67 @@
+@import "fonts"
+@import "mixins"
+
+
 html, body
 	height: 100%
 	width: 100%
 	padding: 0
 	margin: 0
+a
+	text-decoration: none
+
 body
-	background-image: -webkit-linear-gradient(top, #FAD9B6 0%, #BA436B 100%)
+	background-color: #3B2F63
+	background-image: -webkit-radial-gradient(50% top, rgba(84,90,182,0.6) 0%, rgba(84,90,182,0) 75%),-webkit-radial-gradient(right top, #794aa2 0%, rgba(121,74,162,0) 57%) 
+	//background-image: -webkit-linear-gradient(top, #FAD9B6 0%, #BA436B 100%)
+	background-repeat: no-repeat
+	
+	background-size: cover
+	background-attachment: fixed
 
 
 
 .interfaz
 	height: auto
 	width: 100%
-	overflow: auto
-	position: relative
+	overflow: hidden
+	position: fixed
 	z-index: 10
+	top: 0
+	left: 0
+	.menu
+		background-repeat: no-repeat
+		background-image: url("/img/menu.svg")
+		background-position: 0% 50%
+		background-size: 30px 30px
+		width: 64px
+		height: 64px
+		overflow: hidden
+		-webkit-transition: width 0.4s ease
+		-moz-transition: width 0.4s ease
+		-ms-transition: width 0.4s ease
+		-o-transition: width 0.4s ease
+		transition: width 0.4s ease
+		position: absolute
+		top: 20px
+		left: 120px
+		&:hover
+			width: 500px
+		&.active
+			width: 500px
+
+		a
+			padding-top: 20px
+			color: #fff
+			font-family: $book
+			float: left
+			height: 44px
+			display: block
+			margin-left: 25px
+			&:first-child
+				margin-left: 64px
+
+		
 	.logo
 		background-image: url("/img/logoBerners.svg")
 		background-repeat: no-repeat
@@ -24,9 +72,235 @@ body
 		margin-top: 14px
 	.line
 		height: 0px
-		width: 80%
+		width: 100%
 		border-bottom: 1px solid #fff
 		position: absolute
 		left: 120px
 		top: 20px
 		opacity: 0.5
+
+	.social
+		position: absolute
+		top: 35px
+		right: 15px
+		height: 23px
+		display: block
+		width: 210px
+		a
+			float: left
+			width: 24px
+			height: 24px
+			margin-right: 10px
+			display: block
+			background-repeat: no-repeat
+			background-position: 50% 50%
+
+			&.blog
+				width: 63px
+				color: #fff
+				font-family: $book
+
+			&.fb
+				background-image: url("/img/fb.png")
+			&.tw
+				background-image: url("/img/tw.png")
+			&.mail
+				background-image: url("/img/mail.png")
+			&.ins
+				background-image: url("/img/ins.svg")
+
+
+
+
+.section
+	display: block
+	position: relative
+	width: 100%
+	background-image: url("/img/stars.png")
+	
+	.wrap
+		width: 90%
+		padding: 58px 0px
+		padding-bottom: 68px
+		margin-left: auto
+		margin-right: auto
+		position: relative
+		
+	.left,.right
+		display: table-cell
+		vertical-align: middle
+		width: 50%
+		height: auto
+		text-align: center
+		position: relative
+		z-index: 1
+
+
+
+			
+			
+
+
+#about
+	height: 100%
+	display: table
+
+	.bg
+		z-index: 0
+		background-repeat: no-repeat
+		background-attachment: fixed
+		width: 100%
+		position: absolute
+		top: 0
+		left: 0
+		height: 100%
+		/* IE10 Consumer Preview */ 
+		background-image: url("/img/about/bg.jpg")
+		background-position: 50% 50%
+	.stars
+		z-index: 0
+		background-repeat: no-repeat
+		background-attachment: fixed
+		width: 100%
+		position: absolute
+		top: 0
+		left: 0
+		height: 100%
+		/* IE10 Consumer Preview */ 
+		background-image: url("/img/stars.png")
+		background-position: 50% 50%
+	.planet
+		background-image: url("/img/about/planet.svg")
+		background-repeat: no-repeat
+		background-position: 50% 50%
+		background-size: 300px 300px
+		display: block
+		width: 300px
+		height: 300px
+		vertical-align: middle
+		margin-left: auto
+		margin-right: auto
+
+	p.title
+		@include texto($light, 38px, #fff)
+		margin: 0
+		// float: left
+		width: 300px
+
+
+	p.descrip
+		@include texto($book, 18px, #fff)
+		line-height: 18px
+		// float: left
+		width: 300px
+		margin: 0
+		span
+			@include texto($book, 134px, #efff00)
+			letter-spacing: -6px
+			margin-left: -6px
+
+
+#about2
+
+	height: 100%
+	display: table	
+			
+	.bg
+		z-index: 0
+		background-repeat: no-repeat
+		background-size: cover
+		width: 100%
+		position: absolute
+		top: 0
+		left: 0
+		height: 100%
+		/* IE10 Consumer Preview */ 
+		background-image: url("/img/about/bg2.jpg")
+		background-position: 50% 50%
+
+#about3
+
+	height: 100%
+	display: table	
+			
+	.bg
+		z-index: 0
+		background-repeat: no-repeat
+		background-size: cover
+		width: 100%
+		position: absolute
+		top: 0
+		left: 0
+		height: 100%
+		/* IE10 Consumer Preview */ 
+		background-image: url("/img/about/bg3.jpg")
+		background-position: 50% 50%
+#about4
+
+	height: 100%
+	display: table	
+			
+	.bg
+		z-index: 0
+		background-repeat: no-repeat
+		background-size: cover
+		width: 100%
+		position: absolute
+		top: 0
+		left: 0
+		height: 100%
+		/* IE10 Consumer Preview */ 
+		background-image: url("/img/about/bg4.jpg")
+		background-position: 50% 50%
+#about5
+
+	height: 100%
+	display: table	
+			
+	.bg
+		z-index: 0
+		background-repeat: no-repeat
+		background-size: cover
+		background-attachment: fixed
+		width: 100%
+		position: absolute
+		top: 0
+		left: 0
+		height: 100%
+		/* IE10 Consumer Preview */ 
+		background-image: url("/img/about/bg5.jpg")
+		background-position: 50% 50%
+	.compita1
+		width: 100%
+		height: auto
+		position: relative
+		z-index: 1
+	.compita2
+		width: 100%
+		height: auto
+		position: relative
+		z-index: 1
+			
+#about6
+
+	height: 100%
+	display: table	
+			
+	.bg
+		z-index: 0
+		background-repeat: no-repeat
+		background-size: cover
+		// background-attachment: fixed
+		width: 100%
+		position: absolute
+		top: 0
+		left: 0
+		height: 100%
+		/* IE10 Consumer Preview */ 
+		background-image: url("/img/about/bg6.jpg")
+		background-position: 50% 50%
+
+
+
+
+
