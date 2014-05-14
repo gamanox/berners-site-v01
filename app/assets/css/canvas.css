@@ -33,7 +33,7 @@ body {
     background-color: transparent;
 	z-index: 1;
   	-ms-touch-action: none; 
-  	display: none;
+  	/*display: none;*/
 
 
 }

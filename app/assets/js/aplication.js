@@ -322,7 +322,7 @@ function render() {
     //camera.position.x = Math.cos(time) * 100;    
     //camera.lookAt(group.position);
     ship.rotation.y = time * 3;
-    star_system.rotation.y = (time * 0.1);
+    // star_system.rotation.y = (time * 0.1);
     
     
 

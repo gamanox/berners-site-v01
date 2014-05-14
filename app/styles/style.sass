@@ -144,6 +144,19 @@ body
 #about
 	height: 100%
 	display: table
+	.gradient
+		background-image: url(/img/about/bernersV8.png)
+		background-position: 0px 0px
+		background-repeat: no-repeat
+		position: absolute
+		width: 1366px
+		height: 800px
+		top: 50%
+		margin-top: -50%
+		z-index: 2
+		right: 50%
+		margin-right: -50%
+		
 
 	.bg
 		z-index: 0
@@ -180,6 +193,8 @@ body
 		vertical-align: middle
 		margin-left: auto
 		margin-right: auto
+		display: none
+		
 
 	p.title
 		@include texto($light, 38px, #fff)
