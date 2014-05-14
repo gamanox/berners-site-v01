@@ -19,6 +19,24 @@ var postprocessing = {};
 var isAnimating = false;
 var meshes = {};
 
+var loader = new THREE.ColladaLoader();
+
+  loader.options.convertUpAxis = true;
+
+  loader.load( 'obj/corazon_collada.dae', function ( collada ) {
+ //dummy1.dae
+
+    var dae = collada.scene;
+
+    var skin = collada.skins[ 0 ];
+
+dae.position.set(0,0,0);//x,z,y- if you think in blender dimensions ;)
+dae.scale.set(1.5,1.5,1.5);
+
+scene.add(dae);
+
+});
+
 
  $(document).ready(function(){
     var col = 255;
