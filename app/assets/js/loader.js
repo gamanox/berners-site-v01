@@ -35,7 +35,7 @@
 
          ship.castShadow = true;
          ship.receiveShadow = false;
-         scene.add(ship);
+         // scene.add(ship);
 
 
      });

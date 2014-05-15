@@ -18,7 +18,7 @@ var renderPass, copyPass, effectFocus, composer, hblur, vblur;
 var postprocessing = {};
 var isAnimating = false;
 var meshes = {};
-
+var dae = collada.scene;
 var loader = new THREE.ColladaLoader();
 
   loader.options.convertUpAxis = true;
@@ -26,7 +26,7 @@ var loader = new THREE.ColladaLoader();
   loader.load( 'obj/corazon_collada.dae', function ( collada ) {
  //dummy1.dae
 
-    var dae = collada.scene;
+    
 
     var skin = collada.skins[ 0 ];
 
