@@ -20,7 +20,7 @@
  function loadShip() {
 
      var loader = new THREE.JSONLoader();
-     loader.load('/obj/mundo.js', function (geometry, materials) {
+     loader.load('/obj/frame.js', function (geometry, materials) {
 
          var material = new THREE.MeshLambertMaterial({
              ambient: 0x999999,
@@ -31,11 +31,11 @@
 
          ship = new THREE.Mesh(geometry, material);
          //ship.position.set, -5, 0);
-         ship.scale.multiplyScalar(0.01);
+         ship.scale.multiplyScalar(1);
 
          ship.castShadow = true;
          ship.receiveShadow = false;
-         // scene.add(ship);
+         scene.add(ship);
 
 
      });

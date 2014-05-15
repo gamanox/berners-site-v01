@@ -18,12 +18,12 @@ var renderPass, copyPass, effectFocus, composer, hblur, vblur;
 var postprocessing = {};
 var isAnimating = false;
 var meshes = {};
-var dae = collada.scene;
-var loader = new THREE.ColladaLoader();
 
+var loader = new THREE.ColladaLoader();
   loader.options.convertUpAxis = true;
 
   loader.load( 'obj/corazon_collada.dae', function ( collada ) {
+    var dae = collada.scene;
  //dummy1.dae
 
     
@@ -33,7 +33,7 @@ var loader = new THREE.ColladaLoader();
 dae.position.set(0,0,0);//x,z,y- if you think in blender dimensions ;)
 dae.scale.set(1.5,1.5,1.5);
 
-scene.add(dae);
+// scene.add(dae);
 
 });
 
